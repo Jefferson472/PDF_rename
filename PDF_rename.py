@@ -3,13 +3,13 @@ import re
 import shutil
 import pdfplumber
 
-# ACESSAR DIRETÓRIO E LER SOMENTE PDF
+# ACESSAR DIRETÓRIO E LER SOMENTE ARQUIVOS .PDF
 main_folder = os.getcwd()
 print(main_folder)
 
 
 
-# ACESSA O ARQUIVO PDF E LÊ O NÚMERO DO PEDIDO NA POSIÇÃO [52:59] E O PRIMEIRO E SEGUNDO NOME DO FORNECEDOR
+# ACESSA O ARQUIVO PDF E LÊ AS PALAVRAS NAS POSIÇÕES [9], [11] E [12] E RETORNA ESTA INFORMAÇÃO
 def ler_pdf(path_pdf):
     path = main_folder + '\\' + path_pdf
     with pdfplumber.open(path) as pdf:
@@ -26,6 +26,7 @@ def ler_pdf(path_pdf):
 
 
 if __name__ == '__main__':
+    # VERIFICA ARQUIVO POR ARQUIVO DO DIRETÓRIO ATUAL, CASO SEJA UM .PDF INICIA A EXECUÇÃO DE LEITURA E RENOMEIA O ARQUIVO 
     for root, dirs, files in os.walk(main_folder):
         for file in files:
             if re.search(r'\.pdf$', file):
