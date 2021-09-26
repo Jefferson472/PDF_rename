@@ -1,5 +1,5 @@
 # PDF_rename
- Renomeador de PDF de acordo com base nas informações do arquivo.
+ Renomeador de PDF com base nas informações do arquivo.
 
 ---
 
