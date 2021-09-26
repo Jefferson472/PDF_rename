@@ -40,6 +40,7 @@ if __name__ == '__main__':
                     print(f'Movendo arquivo "{file}" para "{new_name}"')
                     try:
                         shutil.move(old_file_full_path, new_file_full_path)
+                    # CRIA UM LOG PARA OS ARQUIVOS QUE NÃO FORAM RENOMEADOS CORRETAMENTE
                     except:
                         log_event = open('log_event.txt', 'a')
                         log_event.write(f'Não foi possível renomear o arquivo: {file} \n')
