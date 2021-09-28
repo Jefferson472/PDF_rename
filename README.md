@@ -1,5 +1,5 @@
 # PDF_rename
- Renomeador de PDF com base nas informações do arquivo.
+ Script desenvolvido em Python para renomear PDF com base nas informações específicas do arquivo.
 
 ---
 
